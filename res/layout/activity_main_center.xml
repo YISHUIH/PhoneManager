@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.feicui.view.ClearView
+        android:id="@+id/cv_clear"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+      />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_centerHorizontal="true"
+         android:layout_centerVertical="true"
+        android:src="@drawable/home_score_normal_bg" />
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="40"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+   
+
+    <Button
+        android:id="@+id/bt_go"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/selector_main_speed"
+        android:text="手机加速" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_score"
+        android:layout_toRightOf="@+id/tv_score"
+        android:text="%"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+   
+</RelativeLayout>
