@@ -3,12 +3,16 @@
     package="com.feicui.activity"
     android:versionCode="1"
     android:versionName="1.0" >
+
     <!-- 打电话权限 -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <!-- 杀进程权限 -->
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
     <!-- 相机权限 -->
     <uses-permission android:name="android.permission.CAMERA" />
+    <!-- sd卡的读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-sdk
         android:minSdkVersion="17"
@@ -63,6 +67,18 @@
         <activity
             android:name=".PhoneCheckActivity"
             android:label="@string/title_activity_phone_check" >
+        </activity>
+        <activity
+            android:name=".FileManagerActivity"
+            android:label="@string/title_activity_file_manager" >
+        </activity>
+        <activity
+            android:name=".FileListActivity"
+            android:label="@string/title_activity_file_list" >
+        </activity>
+        <activity
+            android:name=".ClearActivity"
+            android:label="@string/title_activity_clear" >
         </activity>
     </application>
 

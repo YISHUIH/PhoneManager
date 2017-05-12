@@ -25,5 +25,8 @@
     <string name="title_activity_soft_manager">SoftManagerActivity</string>
     <string name="title_activity_soft_list">SoftListActivity</string>
     <string name="title_activity_phone_check">PhoneCheckActivity</string>
+    <string name="title_activity_file_manager">FileManagerActivity</string>
+    <string name="title_activity_file_list">FileListActivity</string>
+    <string name="title_activity_clear">ClearActivity</string>
 
 </resources>

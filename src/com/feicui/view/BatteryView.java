@@ -102,7 +102,6 @@ public class BatteryView extends View {
 			public void run() {
 				move += 10;
 				if (isCancel) {
-					Log.e("cancel", "cancel");
 					timer.cancel();
 				}
 				postInvalidate();

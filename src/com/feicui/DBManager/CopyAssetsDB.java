@@ -49,4 +49,45 @@ public class CopyAssetsDB {
 			e.printStackTrace();
 		}
 	}
+
+	/**
+	 * 复制垃圾清理数据库
+	 * @param context
+	 */
+	public static void copyClearDB(Context context) {
+		// 1复制文件到data/data/包名/数据库名.db
+		String path = Environment.getDataDirectory() + "/data/"
+				+ context.getPackageName() + "/clearpath.db";
+		try {
+			//读取assets文件夹内的数据库文件,获取一个输入流
+			InputStream is = context.getAssets().open("db/clearpath.db");
+			//根据路径创建文件File对象
+			File file=new File(path);
+			if(!file.exists()){//如果文件不存在
+				//新建文件
+				file.createNewFile();
+				//得到文件输出流，往文件中写入内容
+				FileOutputStream fos=new FileOutputStream(file);
+				
+				//开始读写操作
+				//创建一个byte[]数组用来保存每次读取到的内容
+				byte[] b=new byte[1024];
+				//一个int对象，用来保存读取到的字节长度
+				int len=0;
+				//循环读取
+				while ((len=is.read(b))!=-1) {
+					//将每次读取到的内容，写入文件
+					fos.write(b, 0, len);
+				}
+				//读写操作完毕，关闭相关流
+				is.close();
+				fos.close();
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+
+	}
 }

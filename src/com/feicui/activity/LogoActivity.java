@@ -1,5 +1,7 @@
 package com.feicui.activity;
 
+import com.feicui.base.BaseActivity;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -11,7 +13,7 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 
-public class LogoActivity extends Activity {
+public class LogoActivity extends BaseActivity {
 	RelativeLayout rl;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

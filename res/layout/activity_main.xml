@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/deepblue"
     tools:context=".MainActivity" >
 
     <com.feicui.view.TitleView
@@ -13,24 +14,39 @@
     </com.feicui.view.TitleView>
 
     <LinearLayout
-        
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        
-        android:padding="20dp"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:padding="20dp" >
 
-        <include
-            layout="@layout/activity_main_center"
-            android:visibility="gone" />
+        <FrameLayout
+            android:id="@+id/fl_search"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:visibility="gone"
+             >
 
-        <com.feicui.view.MyView 
+            <com.feicui.view.ClearView
+                android:id="@+id/cv_search"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alpha="0.5"
+                android:src="@drawable/phone" />
+        </FrameLayout>
+
+        <com.feicui.view.MyView
             android:id="@+id/mv_speed"
-            android:layout_gravity="center"
             android:layout_width="200dp"
             android:layout_height="200dp"
-             />
+            android:layout_gravity="center" />
     </LinearLayout>
 
     <include layout="@layout/activity_main_bottom" />

@@ -119,7 +119,7 @@ public class MyView extends View {
 
 				postInvalidate();
 			}
-		}, 500, 30);
+		}, 0, 30);
 
 	}
 
@@ -129,10 +129,7 @@ public class MyView extends View {
 
 			@Override
 			public void run() {
-				move += 1;
-				if (move == 100) {
-					timer.cancel();
-				}
+				move += 10;
 				postInvalidate();
 			}
 		}, 500, 200);
@@ -210,7 +207,6 @@ public class MyView extends View {
 		Path path = new Path();
 		waterPaint.setColor(color);
 		path.reset();
-		canvas.clipPath(path);
 
 		path.addCircle(len / 2, len / 2, clipRadius, Path.Direction.CCW);
 		canvas.clipPath(path, android.graphics.Region.Op.REPLACE);

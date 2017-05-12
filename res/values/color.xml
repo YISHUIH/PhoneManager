@@ -9,6 +9,7 @@
     <color name="background">#F9F9F9</color>
     <color name="blue">#FF009ACD</color>
     <color name="transparency">#00000000</color>
+    <color name="deepblue">#034289</color>
     <color name="halftransparency">#e0000000</color>
     <!-- 内存空间进度条背景色 -->
 
